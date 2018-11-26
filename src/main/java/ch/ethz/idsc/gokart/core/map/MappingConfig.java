@@ -38,7 +38,7 @@ public class MappingConfig {
    * but also the corner cutting behavior of the pure pursuit */
   public Scalar obsRadius = Quantity.of(1.3, SI.METER);
   /** Cell dimension of a single grid cell in [m] */
-  public Scalar cellDim = Quantity.of(0.2, SI.METER);
+  public Scalar cellDim = Quantity.of(0.5, SI.METER);
   public Boolean alongLine = false;
   /** Minimal obstacle height. Used for inverse sensor model
    * only relevant when alongLine == true */

@@ -15,7 +15,7 @@ import ch.ethz.idsc.tensor.sca.Ramp;
 public class TrajectoryConfig {
   public static final TrajectoryConfig GLOBAL = AppResources.load(new TrajectoryConfig());
   /***************************************************/
-  public Scalar planningPeriod = Quantity.of(1, SI.SECOND); // 1[s] == 1[Hz]
+  public Scalar planningPeriod = Quantity.of(0.5, SI.SECOND); // 1[s] == 1[Hz]
   public Scalar expandFraction = RationalScalar.of(3, 4);
   public Scalar planningOffset = Quantity.of(2.5, SI.METER);
   /** horizonDistance is unit-less because it entails all three: x, y, heading using Se2Wrap
@@ -50,6 +50,6 @@ public class TrajectoryConfig {
   /** @return matrix with dimensions N x 3
    * @throws Exception if waypoints cannot be retrieved from resources */
   public static Tensor getWaypoints() {
-    return ResourceData.of("/dubilab/waypoints/20180610.csv").unmodifiable();
+    return ResourceData.of("/dubilab/waypoints/20181126.csv").unmodifiable();
   }
 }
